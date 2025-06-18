@@ -20,10 +20,10 @@ namespace Library.Domain.Tests
         public async Task GetBookByCatalogCode_Success()
         {
             var repo = new BookInMemoryRepository();
-            var book = await repo.GetByCatalogCode("A123");
+            var book = await repo.GetByCatalogCode("A001");
 
             Assert.NotNull(book);
-            Assert.Equal("Основы SQL", book?.Title);
+            Assert.Equal("История России", book?.Title);
         }
 
         /// <summary>
